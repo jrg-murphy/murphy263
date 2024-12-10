@@ -1,7 +1,233 @@
-<html>
-    <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arriendo frente al Mar Viña del Mar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    </header>
-    <body>
-        MURPHY 263
-    </body>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+                        url('/api/placeholder/1920/300');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #1a365d;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .address {
+            font-size: 1.2em;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2em;
+            color: #0891b2;
+            font-weight: bold;
+            margin: 25px 0;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            color: #0891b2;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(8, 145, 178, 0.3);
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(8, 145, 178, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            
+            .feature {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="imgs/casa.jpg">
+            <h1>Casa frente al mar</h1> 
+            <h2>Viña del Mar, Chile</h2>
+            <p>Arriendo de verano</p>
+            <p>Arriendo por días y semanas</p>
+<br><br>
+            <h4>Consulta disponiblidad y precios</h4>
+            <h1>casamurphy263@gmail.com</h1>
+   
+            <div class="features">
+                <span class="feature">Frente a la playa</span>
+                <span class="feature">Vista al mar</span>
+                <span class="feature">Piscina</span>
+                
+                <span class="feature">6 Habitaciones</span>
+                <span class="feature">4 Baños</span>
+                <span class="feature">Estacionamiento 2 Autos</span>
+                <span class="feature">300 m2</span>
+                <span class="feature">Mascotas bienvenidas</span>
+                <span class="feature">Niños bienvenidos</span>
+
+            </div>
+
+        </header>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="imgs/vista.jpg" alt="Vista">
+                <div class="image-caption">Vista</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/living.jpg" alt="Modern Living Room">
+                <div class="image-caption">Living</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/cocina.jpg" alt="Gourmet Kitchen">
+                <div class="image-caption">Cocina</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="imgs/piscina.jpg" alt="Piscina">
+                <div class="image-caption">Piscina</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/patio.jpg" alt="Patio">
+                <div class="image-caption">Patio</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/terraza.jpg" alt="Terraza">
+                <div class="image-caption">Terraza</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/habitacion-3.jpg" alt="Dormitorios">
+                <div class="image-caption">Dormitorios</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/habitacion-1.jpg" alt="Dormitorios">
+                <div class="image-caption">Dormitorios</div>
+            </div>
+            <div class="gallery-item">
+                <img src="imgs/habitacion-2.jpg" alt="Dormitorios">
+                <div class="image-caption">Dormitorios</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
